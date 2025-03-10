@@ -49,3 +49,16 @@ document.getElementById('btn-buy-pills').addEventListener('click', () => {
     document.getElementById('p_health_wishes').innerText = '';
     console.log('btn-buy-wishes clicked');
 });
+
+let img = 3;
+
+document.getElementById('btn_left-arrow').addEventListener('click', () => {  
+    console.log('left');
+    img--
+    console.log(img)
+    if (img == 0) {
+        img = 3
+    }
+    document.getElementById('main-image').setAttribute('src', `img/gallery/${img}.jpg`)
+})
+
