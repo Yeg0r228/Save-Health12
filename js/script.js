@@ -61,7 +61,7 @@ document.getElementById('btn_left-arrow').addEventListener('click', () => {
     }
     document.getElementById('main-image').setAttribute('src', `img/gallery/${img}.jpg`)
 });
-document.getElementById("right-arrow").addEventListener("click", () => {
+document.getElementById("btn-right-arrow").addEventListener("click", () => {
   console.log('Right arrow clicked!');
   img++;
   console.log(img);
