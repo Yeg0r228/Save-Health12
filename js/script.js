@@ -60,5 +60,14 @@ document.getElementById('btn_left-arrow').addEventListener('click', () => {
         img = 3
     }
     document.getElementById('main-image').setAttribute('src', `img/gallery/${img}.jpg`)
-})
+});
+document.getElementById("right-arrow").addEventListener("click", () => {
+  console.log('Right arrow clicked!');
+  img++;
+  console.log(img);
+  if (img == 4) {
+    img = 1;
+  }
+  document.getElementById('main-image').setAttribute('src', img/${img}.jpg);
+});
 
