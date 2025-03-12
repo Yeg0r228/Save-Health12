@@ -68,6 +68,6 @@ document.getElementById("btn-right-arrow").addEventListener("click", () => {
   if (img == 4) {
     img = 1;
   }
-  document.getElementById('main-image').setAttribute('src', img/${img}.jpg);
+  document.getElementById('main-image').setAttribute('src', `img/gallery/${img}.jpg`)
 });
 
