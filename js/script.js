@@ -52,7 +52,7 @@ document.getElementById('btn-buy-pills').addEventListener('click', () => {
 
 let img = 3;
 
-document.getElementById('btn_left-arrow').addEventListener('click', () => {  
+document.getElementById('btn-left-arrow').addEventListener('click', () => {  
     console.log('left');
     img--
     console.log(img)
