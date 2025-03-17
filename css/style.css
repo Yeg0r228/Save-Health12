@@ -42,8 +42,9 @@ h2 {
 
 
 
-.maim-image {
+#maim-image {
   width: 400px;
+  height: 200px;
 }
 .arrow-image {
   width: 64px;
@@ -183,4 +184,53 @@ gap: 10px;
 .arrow-image {
   width: 64px;
   height: 64px;
+}
+
+#btn-left-arrow, #btn-right-arrow {
+  cursor: pointer;
+}
+
+#btn-left-arrow:hover, #btn-right-arrow:hover {
+  filter: brightness(0.8);
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Додати тінь на головне зображення галереї */
+#main-image {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тінь */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Плавний перехід */
+}
+
+#main-image:hover {
+  transform: scale(1.05); /* Збільшення при наведенні */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Збільшення тіні */
+}
+
+/* Додати тінь при наведенні на стрілочки */
+#btn-left-arrow:hover,
+#btn-right-arrow:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тінь при наведенні */
+  transform: scale(1.1); /* Збільшення при наведенні */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Змінити колір тіні при кліці на стрілочки */
+#btn-left-arrow:active,
+#btn-right-arrow:active {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Тінь при кліці */
+  transform: scale(1); /* Повернення до початкового розміру */
+}
+
+/* Анімація зміни зображення */
+#main-image {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Плавний перехід */
+}
+
+#main-image.fade-out {
+  opacity: 0; /* Зникнення */
+}
+
+#main-image.fade-in {
+  opacity: 1; /* Поява */
 }

@@ -50,24 +50,49 @@ document.getElementById('btn-buy-pills').addEventListener('click', () => {
     console.log('btn-buy-wishes clicked');
 });
 
-let img = 3;
+let img = 1; // Початкове зображення
+const totalImages = 3; // Кількість зображень у галереї
 
-document.getElementById('btn-left-arrow').addEventListener('click', () => {  
-    console.log('left');
-    img--
-    console.log(img)
-    if (img == 0) {
-        img = 3
+// Функція для плавної зміни зображення
+function changeImage(direction) {
+  const mainImage = document.getElementById('main-image');
+
+  // Додати клас для зникнення
+  mainImage.classList.add('fade-out');
+
+  setTimeout(() => {
+    // Оновити індекс зображення
+    if (direction === 'left') {
+      img--;
+      if (img < 1) img = totalImages; // Повернутися до останнього зображення
+    } else if (direction === 'right') {
+      img++;
+      if (img > totalImages) img = 1; // Повернутися до першого зображення
     }
-    document.getElementById('main-image').setAttribute('src', `img/gallery/${img}.jpg`)
+
+    // Змінити джерело зображення
+    mainImage.setAttribute('src', `img/gallery/${img}.jpg`);
+
+    // Видалити клас зникнення та додати клас появи
+    mainImage.classList.remove('fade-out');
+    mainImage.classList.add('fade-in');
+
+    // Видалити клас появи після завершення анімації
+    setTimeout(() => {
+      mainImage.classList.remove('fade-in');
+    }, 500); // Час анімації (має збігатися з transition у CSS)
+  }, 500); // Час для завершення зникнення
+}
+
+// Ліва стрілочка
+document.getElementById('btn-left-arrow').addEventListener('click', () => {
+  changeImage('left');
 });
-document.getElementById("btn-right-arrow").addEventListener("click", () => {
-  console.log('Right arrow clicked!');
-  img++;
-  console.log(img);
-  if (img == 4) {
-    img = 1;
-  }
-  document.getElementById('main-image').setAttribute('src', `img/gallery/${img}.jpg`)
+
+// Права стрілочка
+document.getElementById('btn-right-arrow').addEventListener('click', () => {
+  changeImage('right');
 });
+
+
 
