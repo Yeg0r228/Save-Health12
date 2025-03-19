@@ -96,3 +96,60 @@ document.getElementById('btn-right-arrow').addEventListener('click', () => {
 
 
 
+//робота з об'єктами
+
+const arrayOfVitaminsObjects = [
+  {
+    "id": 1,
+    "title": "Вітамін C",
+    "photo":"",
+    "description":"",
+    "rating":"",
+    "useful":"",
+  },
+  {
+    "id": 2,
+    "title": "Омега-3",
+    "photo":"",
+    "description":"",
+    "rating":"",
+    "useful":"",
+  },
+  {
+    "id": 3,
+    "title": "Вітамін B3",
+    "photo":"",
+    "description":"",
+    "rating":"",
+    "useful":"",
+  },
+  {
+    "id": 4,
+    "title": "Вітамін D3",
+    "photo":"",
+    "description":"",
+    "rating":"",
+    "useful":"",
+  },
+  {
+    "id": 5,
+    "title": "Вітамін B12",
+    "photo":"",
+    "description":"",
+    "rating":"",
+    "useful":"",
+  },
+]
+
+//console.log(arrayOfVitaminsObjects)
+
+arrayOfVitaminsObjects.forEach((item) => {
+  console.log(item)
+
+  let divVitamin=document.createElement('div');
+  divVitamin.classList.add('vitamin');
+  divVitamin.innerText = item.title
+
+  document.getElementById('p-vitamins').appendChild(divVitamin);
+})
+

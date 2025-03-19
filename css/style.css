@@ -178,9 +178,7 @@ align-items: center;
 gap: 10px;
 }
 
-.maim-image {
-  width: 400px;
-}
+
 .arrow-image {
   width: 64px;
   height: 64px;
@@ -200,7 +198,10 @@ gap: 10px;
 #main-image {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тінь */
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Плавний перехід */
+  height: 300px;
+  width: 400px;
 }
+
 
 #main-image:hover {
   transform: scale(1.05); /* Збільшення при наведенні */
@@ -233,4 +234,22 @@ gap: 10px;
 
 #main-image.fade-in {
   opacity: 1; /* Поява */
+}
+
+
+/*  Вітаміни  */
+#p-vitamins {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.vitamin{
+  border: #999999 1px solid;
+  box-shadow:  10px 10px 20px #c4c4c4;
+  padding: 10px;
+  width: 200px;
+  height: 200px;
 }
