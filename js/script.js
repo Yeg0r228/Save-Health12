@@ -105,7 +105,7 @@ const arrayOfVitaminsObjects = [
     "photo":"",
     "description":"",
     "rating":"",
-    "useful":"",
+    "type":"",
   },
   {
     "id": 2,
@@ -113,7 +113,7 @@ const arrayOfVitaminsObjects = [
     "photo":"",
     "description":"",
     "rating":"",
-    "useful":"",
+    "type":"",
   },
   {
     "id": 3,
@@ -121,7 +121,7 @@ const arrayOfVitaminsObjects = [
     "photo":"",
     "description":"",
     "rating":"",
-    "useful":"",
+    "type":"",
   },
   {
     "id": 4,
@@ -129,7 +129,7 @@ const arrayOfVitaminsObjects = [
     "photo":"",
     "description":"",
     "rating":"",
-    "useful":"",
+    "type":"",
   },
   {
     "id": 5,
@@ -137,7 +137,7 @@ const arrayOfVitaminsObjects = [
     "photo":"",
     "description":"",
     "rating":"",
-    "useful":"",
+    "type":"",
   },
 ]
 
