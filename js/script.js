@@ -102,54 +102,65 @@ const arrayOfVitaminsObjects = [
   {
     "id": 1,
     "title": "Вітамін C",
-    "photo":"",
-    "description":"",
-    "rating":"",
-    "type":"",
+    "photo":"vitaminC.png",
+    "description":"Аскорбíнова кислотá  гамма-лактон 2,3-дегідро-L-гулонової кислоти, вітамін C) — відносно проста органічна кислота. Хімічна формула C6H8O6. Міститься у свіжих фруктах (яблука, сливи, персики тощо) та овочах. Відносять до водорозчинних вітамінів.",
+    "rating":"⭐⭐⭐⭐⭐",
+    "type":"Водорозчинний",
   },
   {
     "id": 2,
     "title": "Омега-3",
-    "photo":"",
-    "description":"",
-    "rating":"",
-    "type":"",
+    "photo":"vitaminOMEGA3.png",
+    "description":"Омега-3 поліненасичені жирні кислоти належать до родини ненасичених жирних кислот, що мають подвійний вуглець-вуглецевий зв'язок в омега-3 позиції, тобто біля третього атома вуглецю від метильного кінця жирної кислоти.",
+    "rating":"⭐⭐⭐⭐",
+    "type":"Жиророзчинний",
   },
   {
     "id": 3,
     "title": "Вітамін B3",
-    "photo":"",
-    "description":"",
-    "rating":"",
-    "type":"",
+    "photo":"vitaminB3.png",
+    "description":"Нікоти́нова кислота́, також ніацин, вітамін B3, вітамін PP (від англ. pellagra preventing), нікотинамід — розчинний у воді вітамін; необхідний для багатьох реакцій окиснення у живих клітинах.",
+    "rating":"⭐⭐⭐⭐",
+    "type":"Водорозчинний",
   },
   {
     "id": 4,
     "title": "Вітамін D3",
-    "photo":"",
-    "description":"",
-    "rating":"",
-    "type":"",
+    "photo":"vitaminD3.png",
+    "description":"Вітамін D3 – це активний антирахітичний фактор. Найважливішою функцією вітаміну D є регулювання метаболізму кальцію та фосфатів, що сприяє правильній мінералізації і росту скелета. Вітамін D3 – це природна форма вітаміну D, що утворюється у тварин і людей.",
+    "rating":"⭐⭐⭐⭐",
+    "type":"Жиророзчинний",
+    
   },
   {
     "id": 5,
     "title": "Вітамін B12",
-    "photo":"",
-    "description":"",
-    "rating":"",
-    "type":"",
+    "photo":"vitaminB12.png",
+    "description":"Вітамін В12 (інколи кобаламін) — це вітамін групи В, бере участь у кровотворенні, регулює вуглеводний і жировий обмін в організмі. При авітамінозі розвивається недокрів'я — анемія. Кобаламін відіграє надзвичайно важливу роль у правильному функціонуванні нервової системи, впливаючи, таким чином, на роботу всіх органів.",
+    "rating":"⭐⭐⭐⭐⭐",
+    "type":"Водорозчинний",
   },
 ]
 
 //console.log(arrayOfVitaminsObjects)
 
 arrayOfVitaminsObjects.forEach((item) => {
-  console.log(item)
+  console.log(item);
 
-  let divVitamin=document.createElement('div');
+  let divVitamin = document.createElement('div');
   divVitamin.classList.add('vitamin');
-  divVitamin.innerText = item.title
+  divVitamin.innerHTML = `
+    <div class='vitamins'>
+      <p>ID: ${item.id}</p>
+      <h3>${item.title}</h3>
+      <hr>
+      <img src="img/vitamins/${item.photo}" alt="${item.title}">
+      <p>${item.description}</p>
+      <span>Рейтинг: ${item.rating}</span>
+      <p>Тип: ${item.type}</p>
+    </div>
+  `;
 
   document.getElementById('p-vitamins').appendChild(divVitamin);
-})
+});
 

@@ -240,20 +240,50 @@ gap: 10px;
 /*  Вітаміни  */
 #p-vitamins {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
+  flex-wrap: wrap; /* Дозволяє переносити стовпчики на новий рядок */
+  justify-content: space-between; /* Розподіл стовпчиків із рівними проміжками */
+  gap: 20px; /* Відстань між стовпчиками */
 }
 
-.vitamin{
+.vitamin {
+  flex: 1 1 calc(33.33% - 20px); /* Кожен стовпчик займає третину ширини з урахуванням відступів */
+  max-width: calc(33.33% - 20px); /* Максимальна ширина стовпчика */
   border: #999999 1px solid;
-  box-shadow:  10px 10px 20px #c4c4c4;
-  padding: 10px;
-  width: 200px;
-  height: 200px;
+  box-shadow: 10px 10px 20px #c4c4c4;
+  padding: 20px;
+  min-height: 300px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.95);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+.vitamin:hover {
+  transform: scale(1.1);
+  box-shadow: 15px 15px 30px #b0b0b0;
+  background: rgba(255, 255, 255, 1);
+}
+
+.vitamin img {
+  text-align: center;
+  width: 150px; /* Збільшено розмір зображення */
+  height: 150px;
+  margin: 10px auto; /* Центрування зображення */
+  display: block;
+  border-radius: 50%; /* Додано округлення зображення */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Додано тінь до зображення */
+  transition: transform 0.3s ease-in-out; /* Плавний перехід для зображення */
+}
+
+.vitamin img:hover {
+  transform: scale(1.2); /* Збільшення зображення при наведенні */
+}
+
+.vitamin h3 {
+  text-align: center;
+  font-size: 22px; /* Збільшено розмір шрифту */
+  color: #0a3d2e;
+  margin-bottom: 10px;
+}
 
 .vitamin p:first-child {
   text-align:right ;
@@ -261,17 +291,13 @@ gap: 10px;
   color: #999999;
 }
 
-.vitamin img {
-  text-align: center;
-  width: 64px;
-  height: 64px;
-  
+.vitamin p:last-child {
+  text-align: justify;
+  font-size: 16px;
+  color: #333333;
 }
-.vitamin h3 {
-  text-align: center;
-  font-size: 20px;
-  
-}
+
+
 
 
 

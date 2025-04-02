@@ -12,6 +12,64 @@
       .site-header h1 {
         text-align: center;
       }
+      .feature-item {
+        width: 25%; /* Зменшено ширину стовпчиків */
+        margin: 10px; /* Додано відступи між стовпчиками */
+        text-align: center;
+        padding: 10px; /* Додано внутрішні відступи */
+        border: 1px solid #ccc; /* Додано рамку для кращого вигляду */
+        border-radius: 10px; /* Округлення кутів */
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1); /* Додано легку тінь */
+        background-color: #f9f9f9; /* Додано світлий фон */
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Плавний перехід */
+      }
+      
+      .feature-item:hover {
+        transform: scale(1.05); /* Збільшення при наведенні */
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2); /* Посилення тіні при наведенні */
+      }
+      
+      .feature-item img {
+        width: 50px; /* Зменшено розмір зображення */
+        height: auto;
+        margin-top: 10px;
+      }
+
+      .vitamin {
+        border: #999999 1px solid;
+        box-shadow: 5px 5px 10px #c4c4c4; /* Зменшено тінь */
+        padding: 10px; /* Зменшено внутрішні відступи */
+        width: 150px; /* Зменшено ширину */
+        min-height: 200px; /* Зменшено мінімальну висоту */
+        border-radius: 10px; /* Округлення кутів */
+        background: rgba(255, 255, 255, 0.9); /* Білий фон */
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Плавний перехід */
+      }
+      
+      .vitamin:hover {
+        transform: scale(1.05); /* Збільшення при наведенні */
+        box-shadow: 8px 8px 15px #b0b0b0; /* Посилення тіні при наведенні */
+      }
+      
+      .vitamin img {
+        width: 80px; /* Зменшено розмір зображення */
+        height: 80px;
+        margin: 10px auto; /* Центрування зображення */
+        display: block;
+        border-radius: 50%; /* Округлення зображення */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тінь для зображення */
+      }
+      
+      .vitamin h3 {
+        font-size: 16px; /* Зменшено розмір шрифту заголовка */
+        margin-bottom: 5px;
+        text-align: center;
+      }
+      
+      .vitamin p {
+        font-size: 12px; /* Зменшено розмір шрифту тексту */
+        text-align: justify;
+      }
     </style>
   </head>
   <body>
@@ -69,17 +127,7 @@
       <section class="vitamins">
         <h2>Вітаміни</h2>  
           <p id="p-vitamins">
-          <div class ='vitamins'>
-            <span>id</span>
-            <h3>Title</h3>
-            <hr>
-            <img src="img/vitamins/vitaminC.png" alt="">
-            <p>description</p>
-            <span>rating</span>
-            <p>type</p>
-              
-
-          </div>
+          
         </p>
         </section>
 
