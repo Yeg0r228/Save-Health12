@@ -297,6 +297,11 @@ gap: 10px;
   color: #333333;
 }
 
+.vitamin:hover p:first-child {
+  color: #000000; /* Змінює колір тексту ID на чорний при наведенні */
+  transition: color 0.3s ease-in-out; /* Додає плавний перехід кольору */
+}
+
 
 
 
