@@ -97,25 +97,31 @@ h2 {
 }
 
 .feature-item {
-  width: 30%;
-  min-width: 250px;
+  width: 40%; /* Збільшено ширину стовпчиків */
+  margin: 20px auto; /* Центрування стовпчиків і додавання відступів */
   text-align: center;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(10, 61, 46, 0.2);
-  background: rgba(255, 255, 255, 0.9);
-  transition: transform 0.3s ease-in-out;
-}
-
-.feature-item img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-top: 10px;
+  padding: 20px; /* Збільшено внутрішні відступи */
+  border: 1px solid #ccc; /* Рамка для кращого вигляду */
+  border-radius: 15px; /* Округлення кутів */
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1); /* Легка тінь */
+  background-color: #f9f9f9; /* Світлий фон */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Плавний перехід */
 }
 
 .feature-item:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Збільшення при наведенні */
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2); /* Посилення тіні при наведенні */
+}
+
+.feature-item img {
+  width: 80px; /* Збільшено розмір зображення */
+  height: auto;
+  margin-top: 15px;
+  transition: transform 0.3s ease-in-out; /* Плавний перехід для зображення */
+}
+
+.feature-item img:hover {
+  transform: scale(1.2); /* Збільшення зображення при наведенні */
 }
 
 .site-footer p {
@@ -246,19 +252,21 @@ gap: 10px;
 }
 
 .vitamin {
-  flex: 1 1 calc(33.33% - 20px); /* Кожен стовпчик займає третину ширини з урахуванням відступів */
+  flex: 1 1 calc(33.33% - 20px); /* Кожен стовпчик займає третину ширини */
   max-width: calc(33.33% - 20px); /* Максимальна ширина стовпчика */
   border: #999999 1px solid;
-  box-shadow: 10px 10px 20px #c4c4c4;
-  padding: 20px;
-  min-height: 300px;
-  border-radius: 15px;
-  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 5px 5px 10px #c4c4c4;
+  padding: 10px;
+  min-height: 350px; /* Збільшено мінімальну висоту стовпчика */
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.9);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
 }
 
 .vitamin:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   box-shadow: 15px 15px 30px #b0b0b0;
   background: rgba(255, 255, 255, 1);
 }
@@ -300,6 +308,27 @@ gap: 10px;
 .vitamin:hover p:first-child {
   color: #000000; /* Змінює колір тексту ID на чорний при наведенні */
   transition: color 0.3s ease-in-out; /* Додає плавний перехід кольору */
+}
+
+.vitamin .additional-image {
+  width: 100px; /* Розмір додаткового фото */
+  height: 100px;
+  margin: 20px auto 0; /* Центрування фото під текстом */
+  border-radius: 50%; /* Робить фото круглим */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Додає тінь */
+  transform: scale(0); /* Початковий стан: приховане */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Анімація появи */
+  opacity: 0; /* Початковий стан: невидиме */
+}
+
+.vitamin:hover .additional-image {
+  transform: scale(1); /* Збільшується до нормального розміру */
+  opacity: 1; /* Стає видимим */
+}
+
+.vitamin h3,
+.vitamin p {
+  margin-bottom: 15px; /* Відступ між текстом і додатковим фото */
 }
 
 

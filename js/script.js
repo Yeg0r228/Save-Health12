@@ -97,25 +97,26 @@ document.getElementById('btn-right-arrow').addEventListener('click', () => {
 //робота з об'єктами
 
 fetch('js/vitamins.json')
-.then((response) => response.json())
-.then((data) => {
-  data.forEach((item) => {
-  let divVitamin = document.createElement('div');
-  divVitamin.classList.add('vitamin');
-  divVitamin.innerHTML = `
-    <div class='vitamins'>
-      <p>ID: ${item.id}</p>
-      <h3>${item.title}</h3>
-      <hr>
-      <img src="img/vitamins/${item.photo}" alt="${item.title}" class="main-image">
-      <p>${item.description}</p>
-      <span>Рейтинг: ${item.rating}</span>
-      <p>Тип: ${item.type}</p>
-    </div>
-  `;
+  .then((response) => response.json())
+  .then((data) => {
+    data.forEach((item) => {
+      let divVitamin = document.createElement('div');
+      divVitamin.classList.add('vitamin');
+      divVitamin.innerHTML = `
+        <div class='vitamins'>
+          <p>ID: ${item.id}</p>
+          <h3>${item.title}</h3>
+          <hr>
+          <img src="img/vitamins/${item.photo}" alt="${item.title}" class="main-image">
+          <p>${item.description}</p>
+          <span>Рейтинг: ${item.rating}</span>
+          <p>Тип: ${item.type}</p>
+          <img src="img/vitamins/${item.additionalPhoto}" alt="Додаткове фото для ${item.title}" class="additional-image">
+        </div>
+      `;
 
-document.getElementById('p-vitamins').appendChild(divVitamin);
-});
-})
-  .catch((error) => console.error('Error fetching vitamins:', error));  
+      document.getElementById('p-vitamins').appendChild(divVitamin);
+    });
+  })
+  .catch((error) => console.error('Error fetching vitamins:', error));
 
