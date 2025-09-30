@@ -38,15 +38,23 @@ document.getElementById('btn_health_wishes').addEventListener('click', () => {
     document.getElementById('count-of-pills').innerText = '🧡'.repeat(countofpills) + '🤍'.repeat(5 - countofpills);
 
     if (countofpills == 0) {
-        document.getElementById('btn_health_wishes').style.display = 'none';
+        //document.getElementById('btn_health_wishes').style.display = 'none';
+        document.getElementById('btn_health_wishes').disabled = true;
+        document.getElementById('btn_health_wishes').style.color ="darkgray"
+        document.getElementById('btn_health_wishes').style.background ="gray"
+
     }
 });
 
 document.getElementById('btn-buy-pills').addEventListener('click', () => {
     countofpills = 5;
+    console.log('countofpills ' + countofpills);
     document.getElementById('count-of-pills').innerText = '🧡'.repeat(countofpills);
     document.getElementById('btn_health_wishes').style.display = 'inline-block';
     document.getElementById('p_health_wishes').innerText = '';
+    document.getElementById('btn_health_wishes').disabled = false;
+    document.getElementById('btn_health_wishes').style.color ="#FFFFFF"
+    document.getElementById('btn_health_wishes').style.background ="#28a745"
     console.log('btn-buy-wishes clicked');
 });
 
